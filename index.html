@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mum - Messages</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    .chat-container {
+      width: 100vw;
+      height: 100vh;
+      background: white;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      background: #075e54;
+      color: white;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .header img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .header span {
+      flex: 1;
+      font-weight: bold;
+    }
+    .message-list {
+      padding: 15px;
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+    .missed-call {
+      color: #d32f2f;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .missed-call i {
+      margin-right: 5px;
+    }
+    .text-message {
+      background: #dcf8c6;
+      padding: 10px 14px;
+      border-radius: 10px;
+      max-width: 80%;
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .video-message {
+      margin-top: 20px;
+    }
+    .video-thumbnail {
+      position: relative;
+      width: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .video-thumbnail video {
+      width: 100%;
+      display: block;
+      border-radius: 5px;
+      background: #000;
+    }
+    .video-time {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #555;
+      display: flex;
+      align-items: center;
+    }
+    .video-time i {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="header">
+      <img src="jules.jpg" alt="Mum" />
+      <span>Mum</span>
+    </div>
+    <div class="message-list">
+      <div class="missed-call"><i>📹</i> Missed Video Call • 8:21 AM</div>
+      <div class="missed-call"><i>📹</i> Missed Video Call • 9:03 AM</div>
+      <div class="missed-call"><i>📹</i> Missed Video Call • 10:45 AM</div>
+      <div class="text-message">Happy Birthday sweetheart! 🎉</div>
+      <div class="text-message">Hope you're having a lovely day. Big kiss 😘</div>
+      <div class="video-message">
+        <div class="video-thumbnail">
+          <video controls autoplay muted playsinline>
+            <source src="birthday call.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-time"><i>📹</i> 12:14 PM • Video Message</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
